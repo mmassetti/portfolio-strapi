@@ -31,11 +31,11 @@
     },
     "github": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "url": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "featured": {
       "type": "boolean",
