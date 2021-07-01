@@ -1,15 +1,15 @@
 {
-  "kind": "singleType",
-  "collectionName": "abouts",
+  "kind": "collectionType",
+  "collectionName": "blogs",
   "info": {
-    "name": "About",
-    "description": ""
+    "name": "Blog"
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
@@ -27,14 +27,29 @@
       "required": true,
       "pluginOptions": {}
     },
-    "stack": {
-      "type": "component",
-      "repeatable": true,
-      "component": "description.stack-id",
+    "slug": {
+      "type": "uid",
       "required": true
     },
-    "info": {
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "react",
+        "mern",
+        "graphql"
+      ],
+      "required": true
+    },
+    "date": {
+      "required": true,
+      "type": "date"
+    },
+    "content": {
       "type": "richtext",
+      "required": true
+    },
+    "description": {
+      "type": "string",
       "required": true
     }
   }

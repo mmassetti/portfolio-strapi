@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_description_stack_ids",
+  "info": {
+    "name": "stack_id",
+    "icon": "arrow-right"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

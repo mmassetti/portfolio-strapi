@@ -2,47 +2,54 @@
   "kind": "collectionType",
   "collectionName": "projects",
   "info": {
-    "name": "Project"
+    "name": "Project",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
-    "date": {
-      "type": "date"
-    },
-    "categories": {
-      "collection": "category",
-      "via": "projects",
-      "dominant": true
-    },
-    "content": {
-      "type": "dynamiczone",
-      "components": [
-        "sections.rich-text",
-        "sections.large-media",
-        "sections.images-slider"
-      ]
-    },
-    "coverImage": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"
       ],
       "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "github": {
+      "type": "string",
       "required": true
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "stack": {
+      "type": "component",
+      "repeatable": true,
+      "component": "description.stack-id"
+    },
+    "order": {
+      "type": "integer",
+      "required": true
     }
   }
 }
