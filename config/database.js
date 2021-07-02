@@ -1,7 +1,6 @@
 //RUN LOCAL VERSION
 
 //RUN HOSTED VERSION
-
 module.exports = ({ env }) => ({
   defaultConnection: "default",
   connections: {
